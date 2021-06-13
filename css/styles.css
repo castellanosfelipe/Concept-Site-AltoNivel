@@ -102,9 +102,9 @@ h1,
   line-height: 1.2;
 }
 
-h1,
-.h1 {
+h1 {
   font-size: calc(1.375rem + 1.5vw);
+  font-family: "Black Ops One", cursive;
 }
 @media (min-width: 1200px) {
   h1,
@@ -11522,9 +11522,6 @@ body {
 }
 .masthead h1,
 .masthead .h1 {
-  font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 2.5rem;
   line-height: 2.5rem;
   letter-spacing: 0.8rem;
