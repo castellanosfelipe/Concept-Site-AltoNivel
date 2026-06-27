@@ -1,280 +1,444 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Alto Nivel — Expediciones a los nevados de la Cordillera Central</title>
     <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+      name="description"
+      content="Expediciones guiadas y cursos de alta montaña en los nevados de la Cordillera Central de Colombia. Grupos de máximo seis. Guías certificados ASEGUM. Sin atajos."
     />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <title>Aventura</title>
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <meta name="author" content="Alto Nivel · Deportes de Aventura" />
+    <meta name="theme-color" content="#1C1E1F" />
 
-    <!-- Font Awesome icons (free version)-->
-    <script
-      src="https://use.fontawesome.com/releases/v5.15.3/js/all.js"
-      crossorigin="anonymous"
-    ></script>
-    <!-- Google fonts-->
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <!-- Fonts: Barlow Condensed (display/cartográfico), Source Sans 3 (body), JetBrains Mono (datos técnicos) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;1,400&display=swap"
       rel="stylesheet"
     />
-    <link
-      href="https://fonts.googleapis.com/css?family=Varela+Round"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-      rel="stylesheet"
-    />
-    <!---->
+
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <link href="css/styles.css" rel="stylesheet" />
   </head>
-  <body id="page-top">
-    <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-      <div class="container px-4 px-lg-5">
-        <a class="navbar-brand" href="#page-top">¡Vamos!⛰️</a>
-        <button
-          class="navbar-toggler navbar-toggler-right"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarResponsive"
-          aria-controls="navbarResponsive"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <!-- Menu-->
-          <i class="fas fa-bars"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#about">Quienes somos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#projects">Misticismo</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#signup">Contacto</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
 
-    <!-- Masthead-->
-    <header class="masthead">
-      <div
-        class="
-          container
-          px-4 px-lg-5
-          d-flex
-          h-100
-          align-items-center
-          justify-content-center
-        "
-      >
-        <div class="d-flex justify-content-center">
-          <div class="text-center">
-            <h1 class="mx-auto my-0 text-uppercase">Alto Nivel</h1>
-            <h2 class="text-white-50 mx-auto mt-2 mb-5">
-              Deportes de aventura
-            </h2>
-            <a class="btn btn-primary" href="#about">Conocenos</a>
-          </div>
-        </div>
+  <body id="top">
+    <a class="skip-link" href="#main">Saltar al contenido</a>
+
+    <!-- ─────────────────────────── HEADER / NAV ─────────────────────────── -->
+    <header class="site-header" id="siteHeader">
+      <div class="wrap site-header__inner">
+        <a class="brand" href="#top" aria-label="Alto Nivel, inicio">
+          <span class="brand__mark">▲</span>
+          <span class="brand__name">Alto&nbsp;Nivel</span>
+        </a>
+
+        <nav class="nav-desktop" aria-label="Navegación principal">
+          <a href="#expediciones">Expediciones</a>
+          <a href="#experiencia">Cursos</a>
+          <a href="#guias">Guías</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          type="button"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+          aria-controls="mobileNav"
+        >
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </header>
-    <!-- About-->
-    <section class="about-section text-center" id="about">
-      <div class="container px-4 px-lg-5">
-        <div class="row gx-4 gx-lg-5 justify-content-center">
-          <div class="col-lg-8">
-            <h2 class="text-white mb-4">¿Quienes somos?</h2>
-            <p class="text-white-50">
-              Somos una comunidad dedicada al disfrute y respeto de la vida, a
-              traves de deportes de aventura en los diferentes y espectaculares
-              entornos naturales en el departamento del Meta, realizando las
-              salidas cada fin de semana a destinos impresionantes.
+
+    <!-- Mobile nav (desde la derecha) -->
+    <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+      <div class="mobile-nav__overlay" data-close></div>
+      <nav class="mobile-nav__panel" aria-label="Navegación principal">
+        <button class="mobile-nav__close" type="button" aria-label="Cerrar menú" data-close>✕</button>
+        <a href="#expediciones" data-close>Expediciones</a>
+        <a href="#experiencia" data-close>Cursos</a>
+        <a href="#guias" data-close>Guías</a>
+        <a href="#contacto" data-close>Contacto</a>
+        <a class="mobile-nav__cta" href="#contacto" data-close>Consultar cupos →</a>
+      </nav>
+    </div>
+
+    <main id="main">
+      <!-- ─────────────────────────── 1 · HERO ─────────────────────────── -->
+      <section class="hero" aria-labelledby="hero-title">
+        <!-- ART DIRECTION: foto vertical de un montañista pequeño contra una pared
+             de hielo del Nevado del Huila al amanecer. Escala humana, no panorámica. -->
+        <div class="hero__bg" role="img"
+             aria-label="Ladera glaciar del Nevado del Huila antes del amanecer, con un montañista encordado avanzando hacia la cumbre"></div>
+        <div class="hero__grade" aria-hidden="true"></div>
+
+        <div class="wrap hero__inner">
+          <p class="eyebrow">Alta montaña · Cordillera Central · Colombia</p>
+
+          <!-- ELEMENTO FIRMA — Tipografía como terreno: la montaña vive dentro del número -->
+          <figure class="altimeter" aria-hidden="true">
+            <span class="altimeter__num" data-count-to="5364">0</span>
+            <figcaption class="altimeter__cap">MSNM · Nevado del Huila</figcaption>
+          </figure>
+
+          <h1 id="hero-title" class="hero__title">
+            Prepárate para la montaña que no perdona la improvisación.
+          </h1>
+          <p class="hero__sub">
+            Expediciones guiadas y cursos de alta montaña en los nevados de la
+            Cordillera Central. Grupos de máximo seis. Sin atajos.
+          </p>
+
+          <div class="hero__actions">
+            <a class="btn btn--accent" href="#expediciones">Ver expediciones · temporada 2026</a>
+            <a class="link-arrow" href="#experiencia">¿Primera vez en hielo? Empieza por aquí →</a>
+          </div>
+        </div>
+
+        <a class="scroll-hint" href="#valor" aria-label="Bajar a la siguiente sección">
+          <span>Scroll</span>
+        </a>
+      </section>
+
+      <!-- ─────────────────────── 2 · PROPUESTA DE VALOR ─────────────────────── -->
+      <section class="section valor" id="valor" aria-labelledby="valor-title">
+        <div class="wrap">
+          <h2 id="valor-title" class="visually-hidden">Por qué con nosotros</h2>
+          <div class="valor__grid">
+            <div class="stat">
+              <p class="stat__num">14&nbsp;años</p>
+              <p class="stat__desc">guiando sobre los glaciares de la Cordillera Central.</p>
+            </div>
+            <div class="stat">
+              <p class="stat__num">0</p>
+              <p class="stat__desc">accidentes mayores en más de 9.000 días-persona en montaña.</p>
+            </div>
+            <div class="stat">
+              <p class="stat__num">4.965&nbsp;msnm</p>
+              <p class="stat__desc">la cima más alta alcanzada por un cliente en su primera expedición.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─────────────────────── 3 · EXPEDICIONES ─────────────────────── -->
+      <section class="section expediciones" id="expediciones" aria-labelledby="exp-title">
+        <div class="wrap">
+          <div class="section-head">
+            <h2 id="exp-title" class="section-head__title">Expediciones</h2>
+            <p class="section-head__lead">
+              Cuatro rutas reales, de la escuela de roca a la alta montaña. El precio
+              está a la vista porque la confianza también es parte del equipo.
             </p>
           </div>
-        </div>
-        <!-- <img class="img-fluid" src="" alt="..." /> -->
-      </div>
-    </section>
-    <!-- Projects-->
-    <section class="projects-section bg-light" id="projects">
-      <div class="container px-4 px-lg-5">
-        <!-- Featured Project Row-->
-        <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
-          <div class="col-xl-8 col-lg-7">
-            <img
-              class="img-fluid mb-3 mb-lg-0"
-              src="assets/img/bg-masthead.jpg"
-              alt="..."
-            />
+
+          <div class="filters" role="group" aria-label="Filtrar expediciones por dificultad">
+            <button class="filter is-active" type="button" data-filter="all" aria-pressed="true">Todas</button>
+            <button class="filter" type="button" data-filter="iniciacion" aria-pressed="false">Iniciación</button>
+            <button class="filter" type="button" data-filter="tecnica" aria-pressed="false">Técnicas</button>
+            <button class="filter" type="button" data-filter="alta" aria-pressed="false">Alta montaña</button>
           </div>
-          <div class="col-xl-4 col-lg-5">
-            <div class="featured-text text-center text-lg-left">
-              <h4>Misticismo</h4>
-              <p class="text-black-50 mb-0">
-                ¡Cuenta la leyenda que aquel osado que se atreva a adentrarse en
-                las montallas, gosara de buena salud mental y fisica por el
-                resto de su vida!
-              </p>
-            </div>
-          </div>
-        </div>
-        <!-- Project One Row-->
-        <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
-          <div class="col-lg-6">
-            <img
-              class="img-fluid"
-              src="assets/img/demo-image-01.jpg"
-              alt="..."
-            />
-          </div>
-          <div class="col-lg-6">
-            <div class="bg-black text-center h-100 project">
-              <div class="d-flex h-100">
-                <div
-                  class="project-text w-100 my-auto text-center text-lg-left"
-                >
-                  <h4 class="text-white">Atrevete</h4>
-                  <p class="mb-0 text-white-50">
-                    Atrevete a vivir una experiencia enriquesedora que te sacara
-                    de tu zona de confort y te hara apresiar lo increible de la
-                    naturaleza descubriendo tu maximo potencial.
-                  </p>
-                  <hr class="d-none d-lg-block mb-0 ms-0" />
+
+          <ul class="exp-grid" id="expGrid">
+            <li class="exp-card" data-level="iniciacion">
+              <article>
+                <div class="exp-card__media">
+                  <!-- ART DIRECTION: aproximación al glaciar en retroceso del Santa Isabel, luz plana de niebla -->
+                  <img src="assets/img/bg-signup.jpg" loading="lazy" decoding="async"
+                       alt="Sendero de páramo hacia el glaciar en retroceso del Nevado Santa Isabel, cubierto de frailejones" />
+                  <span class="tag tag--iniciacion">Iniciación</span>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Project Two Row-->
-        <div class="row gx-0 justify-content-center">
-          <div class="col-lg-6">
-            <img
-              class="img-fluid"
-              src="assets/img/demo-image-02.jpg"
-              alt="..."
-            />
-          </div>
-          <div class="col-lg-6 order-lg-first">
-            <div class="bg-black text-center h-100 project">
-              <div class="d-flex h-100">
-                <div
-                  class="project-text w-100 my-auto text-center text-lg-right"
-                >
-                  <h4 class="text-white">Contribuciòn</h4>
-                  <p class="mb-0 text-white-50">
-                    Tenemos como pilar fundamental la conservacion de la flora y
-                    fauna de nuestras montañas, por esto realizamos jornadas de
-                    limpiezas mensuales en los diferentes senderos y fuentes
-                    hidricas.
-                  </p>
-                  <hr class="d-none d-lg-block mb-0 me-0" />
+                <div class="exp-card__body">
+                  <h3 class="exp-card__name">Nevado Santa Isabel</h3>
+                  <dl class="exp-card__meta">
+                    <div><dt>Altitud</dt><dd class="mono">4.965 msnm</dd></div>
+                    <div><dt>Duración</dt><dd class="mono">3 días · 2 noches</dd></div>
+                    <div><dt>Desde</dt><dd class="mono">COP 1.200.000</dd></div>
+                  </dl>
+                  <a class="link-arrow" href="#contacto">Ver itinerario completo →</a>
                 </div>
-              </div>
-            </div>
-          </div>
+              </article>
+            </li>
+
+            <li class="exp-card" data-level="iniciacion">
+              <article>
+                <div class="exp-card__media">
+                  <!-- ART DIRECTION: manos sobre roca en Suesca, detalle de magnesio y arenisca -->
+                  <img src="assets/img/demo-image-02.jpg" loading="lazy" decoding="async"
+                       alt="Manos de un escalador asegurando una presa en las rocas de arenisca de Suesca" />
+                  <span class="tag tag--iniciacion">Básico</span>
+                </div>
+                <div class="exp-card__body">
+                  <h3 class="exp-card__name">Suesca · Escuela de roca</h3>
+                  <dl class="exp-card__meta">
+                    <div><dt>Altitud</dt><dd class="mono">2.600 msnm</dd></div>
+                    <div><dt>Duración</dt><dd class="mono">2 días · 1 noche</dd></div>
+                    <div><dt>Desde</dt><dd class="mono">COP 450.000</dd></div>
+                  </dl>
+                  <a class="link-arrow" href="#contacto">Ver itinerario completo →</a>
+                </div>
+              </article>
+            </li>
+
+            <li class="exp-card" data-level="tecnica">
+              <article>
+                <div class="exp-card__media">
+                  <!-- ART DIRECTION: cono glaciar del Tolima al amanecer, encordamiento sobre pendiente de hielo -->
+                  <img src="assets/img/bg-masthead.jpg" loading="lazy" decoding="async"
+                       alt="Cordada de montañistas ascendiendo la pendiente de hielo del cono glaciar del Nevado del Tolima al amanecer" />
+                  <span class="tag tag--tecnica">Técnica</span>
+                </div>
+                <div class="exp-card__body">
+                  <h3 class="exp-card__name">Nevado del Tolima</h3>
+                  <dl class="exp-card__meta">
+                    <div><dt>Altitud</dt><dd class="mono">5.220 msnm</dd></div>
+                    <div><dt>Duración</dt><dd class="mono">5 días · 4 noches</dd></div>
+                    <div><dt>Desde</dt><dd class="mono">COP 2.400.000</dd></div>
+                  </dl>
+                  <a class="link-arrow" href="#contacto">Ver itinerario completo →</a>
+                </div>
+              </article>
+            </li>
+
+            <li class="exp-card" data-level="alta">
+              <article>
+                <div class="exp-card__media">
+                  <!-- ART DIRECTION: vista desde campamento alto del Huila, cumbre nevada al fondo, tienda en primer plano -->
+                  <img src="assets/img/bg-signup.jpg" loading="lazy" decoding="async"
+                       alt="Vista desde un campamento de altura hacia la cumbre nevada del Nevado del Huila, con una tienda de expedición en primer plano" />
+                  <span class="tag tag--alta">Alta montaña</span>
+                </div>
+                <div class="exp-card__body">
+                  <h3 class="exp-card__name">Nevado del Huila</h3>
+                  <dl class="exp-card__meta">
+                    <div><dt>Altitud</dt><dd class="mono">5.364 msnm</dd></div>
+                    <div><dt>Duración</dt><dd class="mono">7 días · 6 noches</dd></div>
+                    <div><dt>Desde</dt><dd class="mono">COP 4.800.000</dd></div>
+                  </dl>
+                  <a class="link-arrow" href="#contacto">Ver itinerario completo →</a>
+                </div>
+              </article>
+            </li>
+          </ul>
+          <p class="exp-empty" id="expEmpty" hidden>No hay expediciones en esta categoría por ahora.</p>
         </div>
-      </div>
-    </section>
-    <!-- Signup-->
-    <section class="signup-section" id="signup">
-      <div class="container px-4 px-lg-5">
-        <div class="row gx-4 gx-lg-5">
-          <div class="col-md-10 col-lg-8 mx-auto text-center">
-            <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
-            <h2 class="text-white mb-5">
-              ¡Subscribete para recibir actualizaciones!
+      </section>
+
+      <!-- ─────────────────────── 4 · CREDIBILIDAD ─────────────────────── -->
+      <section class="section credibilidad" id="guias" aria-labelledby="cred-title">
+        <div class="wrap">
+          <div class="section-head">
+            <h2 id="cred-title" class="section-head__title">Quién te lleva arriba</h2>
+            <p class="section-head__lead">
+              Primero las personas. La montaña la conocen piedra por piedra, y por eso
+              también saben cuándo dar la vuelta.
+            </p>
+          </div>
+
+          <div class="guides">
+            <article class="guide">
+              <!-- ART DIRECTION: retrato real, luz natural, gesto sobrio. NO sonrisa de catálogo. -->
+              <div class="guide__photo" role="img"
+                   aria-label="Retrato de Marcela Ríos, guía de montaña">MR</div>
+              <div class="guide__text">
+                <h3 class="guide__name">Marcela Ríos</h3>
+                <p class="guide__creds mono">Guía ASEGUM · WFR · 14 años en hielo</p>
+                <blockquote class="guide__quote">
+                  “He subido el Nevado del Tolima 38 veces. Sé a qué hora el hielo
+                  aguanta el peso y a qué hora toca dar la vuelta, aunque la cumbre
+                  esté a media hora.”
+                </blockquote>
+              </div>
+            </article>
+
+            <article class="guide">
+              <div class="guide__photo" role="img"
+                   aria-label="Retrato de Andrés Lemos, instructor de escalada en hielo">AL</div>
+              <div class="guide__text">
+                <h3 class="guide__name">Andrés Lemos</h3>
+                <p class="guide__creds mono">Instructor UIAA · Rescate en grietas · Huila ×11</p>
+                <blockquote class="guide__quote">
+                  “Antes de pisar un glaciar te enseño a caerte y a frenar con el
+                  piolet. Si eso te incomoda, mejor lo trabajamos en la escuela
+                  antes de salir.”
+                </blockquote>
+              </div>
+            </article>
+          </div>
+
+          <p class="certs mono">
+            Certificaciones: ASEGUM · UIAA · Wilderness First Responder (WFR) · Permisos PNN vigentes
+          </p>
+
+          <figure class="testimonial">
+            <blockquote>
+              “Llegué pensando que esto era cuestión de aguante y me equivoqué. Pasé
+              dos fines de semana en la escuela de hielo antes de tocar el Tolima.
+              El día de cumbre el guía decidió descender a 80 metros del filo por una
+              ventana de viento que yo ni había notado. Volvimos completos. Eso es
+              exactamente lo que esperaba de ellos.”
+            </blockquote>
+            <figcaption>
+              <span class="testimonial__name">Daniel Esguerra</span>
+              <span class="testimonial__exp mono">Nevado del Tolima · marzo 2025</span>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- ─────────────────────── 5 · LA EXPERIENCIA ─────────────────────── -->
+      <section class="section experiencia" id="experiencia" aria-labelledby="proc-title">
+        <div class="wrap">
+          <div class="section-head">
+            <h2 id="proc-title" class="section-head__title">Antes de la cima</h2>
+            <p class="section-head__lead">
+              Ninguna expedición empieza en el glaciar. Empieza semanas antes, contigo
+              preparándote. Así es el proceso.
+            </p>
+          </div>
+
+          <ol class="timeline">
+            <li class="step">
+              <span class="step__num mono">01</span>
+              <h3 class="step__title">Consulta de condición física</h3>
+              <p class="step__desc">Evaluamos tu base aeróbica y tu historial. Si no estás listo
+                para esta ruta, te lo decimos y te proponemos otra.</p>
+            </li>
+            <li class="step">
+              <span class="step__num mono">02</span>
+              <h3 class="step__title">Preparación técnica previa</h3>
+              <p class="step__desc">Piolet, crampones, autodetención y nudos en la escuela de
+                roca y hielo. Llegas al glaciar sabiendo qué hacer.</p>
+            </li>
+            <li class="step">
+              <span class="step__num mono">03</span>
+              <h3 class="step__title">Revisión de equipo</h3>
+              <p class="step__desc">Prestamos el equipo técnico colectivo. Revisamos contigo lo
+                personal: botas, capas, guantes. Nada se da por hecho.</p>
+            </li>
+            <li class="step">
+              <span class="step__num mono">04</span>
+              <h3 class="step__title">Logística de la expedición</h3>
+              <p class="step__desc">Transporte, permisos de Parques Nacionales, alimentación de
+                montaña y campamentos. Tú solo cargas lo tuyo.</p>
+            </li>
+            <li class="step">
+              <span class="step__num mono">05</span>
+              <h3 class="step__title">La cumbre — o la decisión de descender</h3>
+              <p class="step__desc">No siempre se llega. El clima y el grupo mandan. Bajar a tiempo
+                también es llegar, y aquí lo tratamos como un éxito.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ─────────────────────── 6 · CTA / CONVERSIÓN ─────────────────────── -->
+      <section class="section cta" id="contacto" aria-labelledby="cta-title">
+        <div class="cta__bg" aria-hidden="true"></div>
+        <div class="cta__grade" aria-hidden="true"></div>
+        <div class="wrap cta__inner">
+          <div class="cta__copy">
+            <p class="eyebrow">Temporada 2026</p>
+            <h2 id="cta-title" class="cta__title">
+              La próxima salida al Nevado del Tolima parte el 14 de agosto. Quedan
+              <span class="cta__cupos">4 cupos</span>.
             </h2>
-            <form class="form-signup d-flex flex-column flex-sm-row">
-              <input
-                class="form-control flex-fill me-0 me-sm-2 mb-3 mb-sm-0"
-                id="inputEmail"
-                type="email"
-                placeholder="Ingresa tu email..."
-              />
-              <button class="btn btn-primary" type="submit">Subscribete</button>
-            </form>
+            <p class="cta__lead">
+              Cuéntanos qué expedición te interesa y revisamos contigo si es la ruta
+              adecuada para tu nivel. Sin compromiso de compra.
+            </p>
+
+            <a class="whatsapp" href="https://wa.me/573115546724" target="_blank" rel="noopener noreferrer">
+              <svg class="whatsapp__icon" viewBox="0 0 32 32" width="22" height="22" aria-hidden="true">
+                <path fill="currentColor" d="M16 3C9.4 3 4 8.3 4 14.9c0 2.4.7 4.6 1.9 6.5L4 29l7-1.8c1.8 1 3.8 1.5 5.9 1.5 6.6 0 12-5.3 12-11.9C28.9 8.3 23.5 3 16 3zm0 21.7c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.1 1.1 1.1-4-.3-.4c-1.1-1.7-1.6-3.6-1.6-5.6 0-5.5 4.5-9.9 10-9.9s10 4.4 10 9.9-4.5 10.1-9.4 10.1zm5.5-7.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-1.8-.9-2.9-1.6-4.1-3.6-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5 0-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.3 5.2 4.6 2.9 1.2 2.9.8 3.5.8.5 0 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.3-.6-.4z"/>
+              </svg>
+              <span>Escríbenos por WhatsApp · (+57) 311 554 6724</span>
+            </a>
           </div>
-        </div>
-      </div>
-    </section>
-    <!-- Contact-->
-    <section class="contact-section bg-black">
-      <div class="container px-4 px-lg-5">
-        <div class="row gx-4 gx-lg-5">
-          <div class="col-md-4 mb-3 mb-md-0">
-            <div class="card py-4 h-100">
-              <div class="card-body text-center">
-                <i class="fas fa-map-marked-alt text-primary mb-2"></i>
-                <h4 class="text-uppercase m-0">Direccion</h4>
-                <hr class="my-4 mx-auto" />
-                <div class="small text-black-50">
-                  Montañas en el departamento del Meta
-                </div>
-              </div>
+
+          <form class="form" id="contactForm" novalidate>
+            <div class="field">
+              <label for="f-nombre">Nombre completo</label>
+              <input id="f-nombre" name="nombre" type="text" autocomplete="name" required />
+              <p class="field__error" id="err-nombre" aria-live="polite"></p>
             </div>
-          </div>
-          <div class="col-md-4 mb-3 mb-md-0">
-            <div class="card py-4 h-100">
-              <div class="card-body text-center">
-                <i class="fas fa-envelope text-primary mb-2"></i>
-                <h4 class="text-uppercase m-0">Email</h4>
-                <hr class="my-4 mx-auto" />
-                <div class="small text-black-50">
-                  <a href="#!">altonivel.anda@gmail.com</a>
-                </div>
-              </div>
+            <div class="field">
+              <label for="f-email">Correo electrónico</label>
+              <input id="f-email" name="email" type="email" autocomplete="email" required
+                     aria-describedby="err-email" />
+              <p class="field__error" id="err-email" aria-live="polite"></p>
             </div>
-          </div>
-          <div class="col-md-4 mb-3 mb-md-0">
-            <div class="card py-4 h-100">
-              <div class="card-body text-center">
-                <i class="fas fa-mobile-alt text-primary mb-2"></i>
-                <h4 class="text-uppercase m-0">Celular</h4>
-                <hr class="my-4 mx-auto" />
-                <div class="small text-black-50">(+57) 3115546724</div>
-              </div>
+            <div class="field">
+              <label for="f-wpp">WhatsApp</label>
+              <input id="f-wpp" name="whatsapp" type="tel" inputmode="tel"
+                     autocomplete="tel" placeholder="(+57) 300 000 0000" required
+                     aria-describedby="err-wpp" />
+              <p class="field__error" id="err-wpp" aria-live="polite"></p>
             </div>
-          </div>
+            <div class="field">
+              <label for="f-exp">¿Qué expedición te interesa?</label>
+              <select id="f-exp" name="expedicion" required aria-describedby="err-exp">
+                <option value="" selected disabled>Selecciona una ruta</option>
+                <option>Suesca · Escuela de roca</option>
+                <option>Nevado Santa Isabel</option>
+                <option>Nevado del Tolima</option>
+                <option>Nevado del Huila</option>
+                <option>Aún no lo sé / necesito orientación</option>
+              </select>
+              <p class="field__error" id="err-exp" aria-live="polite"></p>
+            </div>
+            <div class="field">
+              <label for="f-msg">Mensaje <span class="field__opt">(opcional)</span></label>
+              <textarea id="f-msg" name="mensaje" rows="3"
+                        placeholder="Cuéntanos tu experiencia previa en montaña."></textarea>
+            </div>
+
+            <button class="btn btn--accent btn--block" type="submit">
+              Quiero información sobre esta expedición
+            </button>
+            <p class="form__note">Respondemos en menos de 24 horas. No hay compromiso de compra.</p>
+            <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
+          </form>
         </div>
-        <div class="social d-flex justify-content-center">
-          <!-- <a class="mx-2" href="#!"><i class="fab fa-twitter"></i></a> -->
-          <a
-            class="mx-2"
-            href="https://www.facebook.com/Alto-Nivel-Deportes-de-Aventura-103931267881167/"
-            ><i class="fab fa-facebook-f"></i>
-          </a>
-          <a
-            class="mx-2"
-            href="https://instagram.com/altoniveldeportesdeaventura?utm_medium=copy_link"
-            ><i class="fab fa-instagram"></i>
-          </a>
-          <!-- <a class="mx-2" href="#!"><i class="fab fa-github"></i></a> -->
+      </section>
+    </main>
+
+    <!-- ─────────────────────────── FOOTER ─────────────────────────── -->
+    <footer class="footer">
+      <div class="wrap footer__inner">
+        <a class="brand brand--footer" href="#top" aria-label="Alto Nivel, inicio">
+          <span class="brand__mark">▲</span>
+          <span class="brand__name">Alto&nbsp;Nivel</span>
+        </a>
+
+        <nav class="footer__nav" aria-label="Navegación de pie de página">
+          <a href="#expediciones">Expediciones</a>
+          <a href="#experiencia">Cursos</a>
+          <a href="#guias">Guías</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+
+        <div class="footer__social">
+          <a href="https://www.facebook.com/Alto-Nivel-Deportes-de-Aventura-103931267881167/"
+             target="_blank" rel="noopener noreferrer">Facebook</a>
+          <a href="https://instagram.com/altoniveldeportesdeaventura"
+             target="_blank" rel="noopener noreferrer">Instagram</a>
         </div>
-        <h6 class="text-white-50 justify-content-center d-flex mh-auto">
-          haz parte de nuestra comunidad
-        </h6>
-      </div>
-    </section>
-    <!-- Footer-->
-    <footer class="footer bg-black small text-center text-white-50">
-      <div class="container px-4 px-lg-5">
-        Copyright &copy; Todos los derechos reservados 2021
+
+        <p class="footer__certs mono">ASEGUM · UIAA · WFR · Permisos PNN vigentes</p>
+
+        <div class="footer__base">
+          <p>© 2026 Alto Nivel · Deportes de Aventura. Cordillera Central, Colombia.</p>
+          <p><a href="#top">Política de privacidad</a></p>
+        </div>
+        <p class="footer__sign">La montaña no se conquista. Se respeta y se vuelve.</p>
       </div>
     </footer>
-    <!-- Bootstrap core JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Core theme JS-->
+
     <script src="js/scripts.js"></script>
   </body>
 </html>

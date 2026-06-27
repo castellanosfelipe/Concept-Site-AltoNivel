@@ -1,0 +1,12 @@
+{
+  "name": "alto-nivel",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Landing de expediciones de alta montaña — Alto Nivel (Cordillera Central, Colombia)",
+  "scripts": {
+    "capture": "node scripts/capture.mjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.61.1"
+  }
+}

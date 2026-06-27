@@ -1,0 +1,10 @@
+# Dependencias (no versionar — se reinstalan con `npm install`)
+node_modules/
+
+# Artefactos temporales de captura
+.playwright/
+docs/videos/*.webm
+/tmp/palette.png
+
+# Sistema
+.DS_Store
